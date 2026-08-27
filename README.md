@@ -19,18 +19,16 @@ The project is currently being developed with a focus on practicing Python OOP c
 
 ## 📂 Project Structure
 
-```text
-python-calculator/
-│
-├── main.py
-├── calculate.py
-├── ui.py
-└── README.md
+    python-calculator/
+    │
+    ├── main.py
+    ├── calculate.py
+    ├── ui.py
+    └── README.md
 
 ## ▶️ How to Run
 
-```
-""python main.py""
+    python main.py
 
 ## 📌 About
 
