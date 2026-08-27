@@ -29,8 +29,8 @@ python-calculator/
 
 ## ▶️ How to Run
 
-```bash
-python main.py
+```
+""python main.py""
 
 ## 📌 About
 
