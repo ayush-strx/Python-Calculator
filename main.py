@@ -1,58 +1,85 @@
-from calculate import calculator
+from calculate import Calculator
+
 
 def main():
-    calc = calculator()
-
-    print("<<---------- Simple Calculator ---------->>")
+    calc = Calculator()
 
     while True:
+        print("\n========== Simple Calculator ==========")
+        print("0. Exit")
+        print("1. Addition")
+        print("2. Subtraction")
+        print("3. Multiplication")
+        print("4. Division")
+        print("5. Percentage")
+        print("6. Power")
+        print("7. Modulus")
+        print("8. Floor Division")
+        print("9. Square Root")
+        print("10. Factorial")
+        print("========================================")
+
         try:
-            operand_1 = float(input("Enter the first number: "))
-            operand_2 = float(input("Enter the second number: "))
+            choice = input("\nEnter your choice: ")
 
-            print("\n========== Choose operations: ==========")
-            print(" +  Addition")
-            print(" -  Subtraction")
-            print(" *  Multiplication")
-            print(" /  Division")
-            print(" %  Percentage")
-            print("==========================================")
-
-            operation = input("\nEnter your choice: ")
-
-            if operation == "+":
-                print(f"Result: {operand_1} + {operand_2} = {calc.add(operand_1, operand_2)}")
-
-            elif operation == "-":
-                print(f"Result: {operand_1} - {operand_2} = {calc.subtract(operand_1, operand_2)}")
-
-            elif operation == "*":
-                print(f"Result: {operand_1} * {operand_2} = {calc.multiply(operand_1, operand_2)}")
-
-            elif operation == "/":
-                print(f"Result: {operand_1} / {operand_2} = {calc.divide(operand_1, operand_2)}")
-
-            elif operation == "%":
-                print(f"Result: {operand_2}% of {operand_1} = {calc.percentage(operand_1, operand_2)}")
-
-            else:
-                print("Please enter a valid operation.")
-
-        except ValueError:
-            print("Invalid input. Please enter numeric values.")
-
-        while True:
-            choice = input("\nDo you want to continue (y/n): ").lower()     
-            if choice == "y":
+            if choice == "0":
+                print("\nThank you for using the calculator!")
                 break
 
-            elif choice == "n":
-                print("Thank you for using the calculator!")
-                return
+            elif choice == "1":
+                num_1 = float(input("Enter the first number: "))
+                num_2 = float(input("Enter the second number: "))
+                print(f"\nResult: {num_1} + {num_2} = {calc.add(num_1, num_2)}")
+
+            elif choice == "2":
+                num_1 = float(input("Enter the first number: "))
+                num_2 = float(input("Enter the second number: "))
+                print(f"\nResult: {num_1} - {num_2} = {calc.subtract(num_1, num_2)}")
+
+            elif choice == "3":
+                num_1 = float(input("Enter the first number: "))
+                num_2 = float(input("Enter the second number: "))
+                print(f"\nResult: {num_1} × {num_2} = {calc.multiply(num_1, num_2)}")
+
+            elif choice == "4":
+                num_1 = float(input("Enter the first number: "))
+                num_2 = float(input("Enter the second number: "))
+                print(f"\nResult: {num_1} ÷ {num_2} = {calc.divide(num_1, num_2)}")
+
+            elif choice == "5":
+                num_1 = float(input("Enter the number: "))
+                num_2 = float(input("Enter the percentage: "))
+                print(f"\nResult: {num_2}% of {num_1} = {calc.percentage(num_1, num_2)}")
+
+            elif choice == "6":
+                num_1 = float(input("Enter the base number: "))
+                num_2 = float(input("Enter the exponent: "))
+                print(f"\nResult: {num_1} ** {num_2} = {calc.power(num_1, num_2)}")
+
+            elif choice == "7":
+                num_1 = float(input("Enter the first number: "))
+                num_2 = float(input("Enter the second number: "))
+                print(f"\nResult: {num_1} mod {num_2} = {calc.modulus(num_1, num_2)}")
+
+            elif choice == "8":
+                num_1 = float(input("Enter the first number: "))
+                num_2 = float(input("Enter the second number: "))
+                print(f"\nResult: {num_1} // {num_2} = {calc.floor_division(num_1, num_2)}")
+
+            elif choice == "9":
+                num = float(input("Enter the number: "))
+                print(f"\nResult: √{num} = {calc.square_root(num)}")
+
+            elif choice == "10":
+                num = float(input("Enter the number: "))
+                print(f"\nResult: {num}! = {calc.factorial(num)}")
 
             else:
-                print("Please enter only 'y' or 'n'.")
-                
-if __name__ == "__main__":
+                print("\nPlease enter a valid choice (0-10).")
 
+        except ValueError:
+            print("\nInvalid input. Please enter numeric values.")
+
+
+if __name__ == "__main__":
     main()

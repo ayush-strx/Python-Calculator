@@ -1,35 +1,80 @@
-# 🧮 Python Calculator
+# Simple Calculator
 
-A console-based calculator built using **Python and Object-Oriented Programming (OOP)** concepts.
+A simple console-based calculator built with **Python and Object-Oriented Programming (OOP)**. It provides a menu-driven interface for performing basic and advanced mathematical operations, with built-in handling for invalid inputs and operations such as division by zero.
 
-> 🚧 **Status: Under Development**
+## Features
 
-The project is currently being developed with a focus on practicing Python OOP concepts and building a clean, modular calculator.
+* Addition
+* Subtraction
+* Multiplication
+* Division
+* Percentage
+* Power
+* Modulus
+* Floor Division
+* Square Root
+* Factorial
+* Division by zero handling
+* Invalid input handling
+* Simple menu-based CLI
 
-## ✨ Features
+## Project Structure
 
-- Addition
-- Subtraction
-- Multiplication
-- Division
-- Percentage
-- Division-by-zero handling
-- Invalid input handling
-- Continuous calculations
+```text
+Simple-Calculator/
+│
+├── calculate.py    # Calculator class and calculation methods
+├── main.py         # CLI and user interaction
+└── README.md       # Project documentation
+```
 
-## 📂 Project Structure
+## How to Run
 
-    python-calculator/
-    │
-    ├── main.py
-    ├── calculate.py
-    ├── ui.py
-    └── README.md
+Make sure Python is installed on your system.
 
-## ▶️ How to Run
+Clone the repository:
 
-    python main.py
+```bash
+git clone <repository-url>
+```
 
-## 📌 About
+Go to the project folder:
 
-This project is being built as part of my Python learning journey to practice OOP concepts through a practical project.
+```bash
+cd Simple-Calculator
+```
+
+Run the calculator:
+
+```bash
+python main.py
+```
+
+## Example
+
+```text
+========== Simple Calculator ==========
+0. Exit
+1. Addition
+2. Subtraction
+3. Multiplication
+4. Division
+5. Percentage
+6. Power
+7. Modulus
+8. Floor Division
+9. Square Root
+10. Factorial
+========================================
+
+Enter your choice: 1
+Enter the first number: 20
+Enter the second number: 10
+
+Result: 20.0 + 10.0 = 30.0
+```
+
+## Requirements
+
+* Python 3.x
+* No external libraries required
